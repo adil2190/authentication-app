@@ -3,6 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import * as ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/router";
+import "./index.css";
 
 const rootElement: HTMLElement = document.getElementById("root") as HTMLElement;
 ReactDOM.createRoot(rootElement).render(
