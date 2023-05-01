@@ -2,14 +2,17 @@ import { PhoneIcon } from "@chakra-ui/icons";
 import { Input, InputGroup, InputLeftElement, Stack } from "@chakra-ui/react";
 import React from "react";
 
-function MainInput() {
+type MainInputProps = {
+  icon: React.ReactNode;
+  placeholder?: string;
+  type?: string;
+};
+
+function MainInput({ icon, placeholder, type }: MainInputProps) {
   return (
-    <InputGroup>
-      <InputLeftElement
-        pointerEvents="none"
-        children={<PhoneIcon color="gray.300" />}
-      />
-      <Input type="tel" placeholder="Phone number" />
+    <InputGroup className="input_field">
+      <InputLeftElement pointerEvents="none" children={icon} />
+      <Input type={type || "text"} placeholder={placeholder} />
     </InputGroup>
   );
 }

@@ -2,6 +2,10 @@
   height: 10px;
 }
 
+.h_20 {
+  height: 20px;
+}
+
 .login_box {
   border-radius: 20px !important;
   border: 1px solid #bdbdbd !important;
@@ -10,4 +14,8 @@
 
 .login_card_header {
   padding: 0px 16px !important;
+}
+
+.input_field {
+  margin: 10px 0 !important;
 }
