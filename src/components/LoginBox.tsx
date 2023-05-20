@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Card,
   CardHeader,
@@ -6,15 +5,24 @@ import {
   Flex,
   Text,
   Button,
+  Link,
 } from "@chakra-ui/react";
 
 import DevChIcon from "../assets/devchallenges.svg";
-import MainInput from "./MainInput";
 import { EmailIcon, LockIcon } from "@chakra-ui/icons";
+
+import GithubIcon from "../assets/Gihub.svg";
+import FacebookIcon from "../assets/Facebook.svg";
+import TwitterIcon from "../assets/Twitter.svg";
+import GoogleIcon from "../assets/Google.svg";
+
+import MainInput from "./MainInput";
+import SocialIcon from "./SocialIcon";
+
 function LoginBox() {
   return (
     <Flex justifyContent={"center"} alignItems={"center"} height={"100vh"}>
-      <Card width={500} variant={"outline"} className="login_box">
+      <Card width={473} variant={"outline"} className="login_box">
         <CardHeader className="login_card_header">
           <img src={DevChIcon} alt="Dev Challenges" />
         </CardHeader>
@@ -40,12 +48,24 @@ function LoginBox() {
             placeholder="Password"
           />
           <div className="h_10" />
-          <Button style={{ width: "100%" }}>Start coding now</Button>
+          <Button style={{ width: "100%" }}>
+            <Text>Start coding now</Text>
+          </Button>
           <div className="h_20" />
           <Text fontSize={"14px"} color={"#828282"} align={"center"}>
             or continue with these social profile
           </Text>
           <div className="h_20" />
+          <div className="social_icon_wrapper">
+            <SocialIcon icon={GithubIcon} />
+            <SocialIcon icon={FacebookIcon} />
+            <SocialIcon icon={TwitterIcon} />
+            <SocialIcon icon={GoogleIcon} />
+          </div>
+          <div className="h_20" />
+          <Text fontSize={"14px"} color={"#828282"} align={"center"}>
+            Already a member? <Link className="link">Login</Link>
+          </Text>
         </CardBody>
       </Card>
     </Flex>

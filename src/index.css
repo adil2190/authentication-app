@@ -1,3 +1,9 @@
+:root {
+  --input_border: #bdbdbd;
+  --social_icon_wrapper_border: #828282;
+  --link_color: #2d9cdb;
+}
+
 .h_10 {
   height: 10px;
 }
@@ -6,9 +12,13 @@
   height: 20px;
 }
 
+.link {
+  color: var(--link_color) !important;
+}
+
 .login_box {
   border-radius: 20px !important;
-  border: 1px solid #bdbdbd !important;
+  border: 1px solid var(--input_border) !important;
   padding: 25px !important;
 }
 
@@ -18,4 +28,15 @@
 
 .input_field {
   margin: 10px 0 !important;
+}
+
+.social_icon_wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.social_icon {
+  cursor: pointer;
 }

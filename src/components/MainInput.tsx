@@ -1,5 +1,4 @@
-import { PhoneIcon } from "@chakra-ui/icons";
-import { Input, InputGroup, InputLeftElement, Stack } from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import React from "react";
 
 type MainInputProps = {
