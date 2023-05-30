@@ -20,7 +20,7 @@ import GoogleIcon from "../assets/Google.svg";
 import MainInput from "./MainInput";
 import SocialIcon from "./SocialIcon";
 
-function LoginBox() {
+function SignupBox() {
   return (
     <Flex justifyContent={"center"} alignItems={"center"} height={"100vh"}>
       <Card width={473} variant={"outline"} className="login_box">
@@ -30,9 +30,13 @@ function LoginBox() {
 
         <CardBody>
           <Text as={"b"} fontSize={"18px"}>
-            Login
+            Join thousands of learners from around the world
           </Text>
           <div className="h_10" />
+          <Text fontSize={"16px"}>
+            Master web development by making real-life projects. There are
+            multiple paths for you to choose
+          </Text>
 
           <MainInput
             icon={<EmailIcon color={"gray.500"} />}
@@ -46,7 +50,7 @@ function LoginBox() {
           />
           <div className="h_10" />
           <Button style={{ width: "100%" }}>
-            <Text>Login</Text>
+            <Text>Start coding now</Text>
           </Button>
           <div className="h_20" />
           <Text fontSize={"14px"} color={"#828282"} align={"center"}>
@@ -61,9 +65,9 @@ function LoginBox() {
           </div>
           <div className="h_20" />
           <Text fontSize={"14px"} color={"#828282"} align={"center"}>
-            Don’t have an account yet?{" "}
-            <Link className="link" to={"/signup"}>
-              Register
+            Already a member?{" "}
+            <Link className="link" to={"/login"}>
+              Login
             </Link>
           </Text>
         </CardBody>
@@ -72,4 +76,4 @@ function LoginBox() {
   );
 }
 
-export default LoginBox;
+export default SignupBox;

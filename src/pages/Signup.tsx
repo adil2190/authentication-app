@@ -1,6 +1,6 @@
-import LoginBox from "../components/LoginBox";
+import SignupBox from "../components/SignupBox";
 // import { Button, useColorMode } from "@chakra-ui/react";
-function Login() {
+function Signup() {
   // const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -8,9 +8,9 @@ function Login() {
       {/* <Button onClick={toggleColorMode}>
         Toggle {colorMode === "light" ? "Dark" : "Light"}
       </Button> */}
-      <LoginBox />
+      <SignupBox />
     </div>
   );
 }
 
-export default Login;
+export default Signup;
