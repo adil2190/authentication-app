@@ -7,22 +7,27 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-import DevChIcon from "../assets/devchallenges.svg";
+import DevChIcon from "../../assets/devchallenges.svg";
 import { EmailIcon, LockIcon } from "@chakra-ui/icons";
 
-import GithubIcon from "../assets/Gihub.svg";
-import FacebookIcon from "../assets/Facebook.svg";
-import TwitterIcon from "../assets/Twitter.svg";
-import GoogleIcon from "../assets/Google.svg";
+import GithubIcon from "../../assets/Gihub.svg";
+import FacebookIcon from "../../assets/Facebook.svg";
+import TwitterIcon from "../../assets/Twitter.svg";
+import GoogleIcon from "../../assets/Google.svg";
 
-import MainInput from "./MainInput";
-import SocialIcon from "./SocialIcon";
+import MainInput from "../input/MainInput";
+import SocialIcon from "../misc/SocialIcon";
+import AuthWrapper from "../wrappers/AuthWrapper";
 
-function SignupBox() {
+function LoginBox() {
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/info");
+  };
   return (
-    <Flex justifyContent={"center"} alignItems={"center"} height={"100vh"}>
+    <AuthWrapper>
       <Card width={473} variant={"outline"} className="login_box">
         <CardHeader className="login_card_header">
           <img src={DevChIcon} alt="Dev Challenges" />
@@ -30,13 +35,9 @@ function SignupBox() {
 
         <CardBody>
           <Text as={"b"} fontSize={"18px"}>
-            Join thousands of learners from around the world
+            Login
           </Text>
           <div className="h_10" />
-          <Text fontSize={"16px"}>
-            Master web development by making real-life projects. There are
-            multiple paths for you to choose
-          </Text>
 
           <MainInput
             icon={<EmailIcon color={"gray.500"} />}
@@ -49,8 +50,8 @@ function SignupBox() {
             placeholder="Password"
           />
           <div className="h_10" />
-          <Button style={{ width: "100%" }}>
-            <Text>Start coding now</Text>
+          <Button onClick={handleLogin} style={{ width: "100%" }}>
+            <Text>Login</Text>
           </Button>
           <div className="h_20" />
           <Text fontSize={"14px"} color={"#828282"} align={"center"}>
@@ -65,15 +66,15 @@ function SignupBox() {
           </div>
           <div className="h_20" />
           <Text fontSize={"14px"} color={"#828282"} align={"center"}>
-            Already a member?{" "}
-            <Link className="link" to={"/login"}>
-              Login
+            Don’t have an account yet?{" "}
+            <Link className="link" to={"/signup"}>
+              Register
             </Link>
           </Text>
         </CardBody>
       </Card>
-    </Flex>
+    </AuthWrapper>
   );
 }
 
-export default SignupBox;
+export default LoginBox;

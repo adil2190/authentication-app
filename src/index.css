@@ -40,3 +40,9 @@
 .social_icon {
   cursor: pointer;
 }
+
+.dark_mode_toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
