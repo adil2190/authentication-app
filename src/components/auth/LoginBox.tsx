@@ -1,11 +1,4 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Flex,
-  Text,
-  Button,
-} from "@chakra-ui/react";
+import { Card, CardHeader, CardBody, Text, Button } from "@chakra-ui/react";
 
 import { Link, useNavigate } from "react-router-dom";
 

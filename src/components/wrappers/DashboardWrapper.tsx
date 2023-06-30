@@ -1,7 +1,12 @@
 import React from "react";
+import Header from "../misc/Header";
 
 function DashboardWrapper() {
-  return <div>Dashboard Wrapper</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
 
 export default DashboardWrapper;
