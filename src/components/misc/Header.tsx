@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import DevChIcon from "../../assets/devchallenges.svg";
 import React from "react";
+import HeaderMenu from "../menu/HeaderMenu";
 
 function Header() {
   return (
@@ -11,7 +12,9 @@ function Header() {
       alignItems={"center"}
     >
       <img src={DevChIcon} alt="Dev Challenges" />
-      <div className="header_menu">Menu</div>
+      <div className="header_menu">
+        <HeaderMenu />
+      </div>
     </Flex>
   );
 }
