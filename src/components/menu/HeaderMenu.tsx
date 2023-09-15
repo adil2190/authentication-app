@@ -8,38 +8,38 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 
+import Group from '../../assets/group.png';
+import Profile from "../../assets/profile-user.png"
+
 function HeaderMenu() {
   return (
     <Menu>
       <MenuButton
-        as={Button}
-        rightIcon={<TriangleDownIcon fontSize={12} />}
-        colorScheme="gray"
         fontSize={14}
         fontWeight={500}
       >
-        Your Cats
+        Mirza Adil <ChevronDownIcon />
       </MenuButton>
       <MenuList>
         <MenuItem minH="48px">
           <Image
-            boxSize="2rem"
+            boxSize={5}
             borderRadius="full"
-            src="https://placekitten.com/100/100"
-            alt="Fluffybuns the destroyer"
+            src={Profile}
+            alt="profile"
             mr="12px"
           />
-          <span>Fluffybuns the Destroyer</span>
+          <span className="font_15" >My Profile</span>
         </MenuItem>
         <MenuItem minH="40px">
           <Image
-            boxSize="2rem"
+            boxSize={5}
             borderRadius="full"
-            src="https://placekitten.com/120/120"
-            alt="Simon the pensive"
+            src={Group}
+            alt="profile"
             mr="12px"
           />
-          <span>Simon the pensive</span>
+          <span className="font_15" >Group Chat</span>
         </MenuItem>
       </MenuList>
     </Menu>
