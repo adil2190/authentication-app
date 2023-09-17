@@ -6,12 +6,16 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
+  useColorMode,
 } from "@chakra-ui/react";
 
 import Group from '../../assets/group.png';
+import GroupWhite from '../../assets/group-white.png';
 import Profile from "../../assets/profile-user.png"
+import ProfileWhite from "../../assets/profile-user-white.png"
 
 function HeaderMenu() {
+  const { colorMode } = useColorMode();
   return (
     <Menu>
       <MenuButton
@@ -25,7 +29,7 @@ function HeaderMenu() {
           <Image
             boxSize={5}
             borderRadius="full"
-            src={Profile}
+            src={colorMode === "dark" ? ProfileWhite : Profile}
             alt="profile"
             mr="12px"
           />
@@ -35,7 +39,7 @@ function HeaderMenu() {
           <Image
             boxSize={5}
             borderRadius="full"
-            src={Group}
+            src={colorMode === "dark" ? GroupWhite : Group}
             alt="profile"
             mr="12px"
           />

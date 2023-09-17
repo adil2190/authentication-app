@@ -4,6 +4,26 @@
   --link_color: #2d9cdb;
 }
 
+/* 
+======================================
+            flex
+======================================
+*/
+
+.flex_center_x {
+  display: flex;
+  justify-content: center;
+}
+
+.flex_center_y {
+  display: flex;
+  align-items: center;
+}
+
+.flex_col {
+  flex-direction: column;
+}
+
 .h_10 {
   height: 10px;
 }
@@ -11,7 +31,9 @@
 .h_20 {
   height: 20px;
 }
-
+.h_40 {
+  height: 40px;
+}
 .link {
   color: var(--link_color) !important;
 }
@@ -58,3 +80,16 @@
 .font_15 {
   font-size: 15px;
 }
+
+
+/* 
+==============================================
+          margins
+==============================================
+*/
+
+
+.mt_10 {
+  margin-top: 10px;
+}
+
