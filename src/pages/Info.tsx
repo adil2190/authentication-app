@@ -3,6 +3,7 @@ import DashboardWrapper from "../components/wrappers/DashboardWrapper";
 import { Button, Card, Divider, Flex, Text } from "@chakra-ui/react";
 import AuthWrapper from "../components/wrappers/AuthWrapper";
 import AuthFooter from "../components/auth/AuthFooter";
+import InfoCard from "../components/misc/InfoCard";
 
 function Info() {
   return (
@@ -25,6 +26,15 @@ function Info() {
           </Flex>
           <div className="h_20" />
           <Divider />
+          <InfoCard />
+          <Divider />
+          <InfoCard />
+          <Divider />
+          <InfoCard />
+          <Divider />
+          <InfoCard />
+          <Divider />
+          <InfoCard />
         </Card>
         <div style={{ width: 700 }}>
           <AuthFooter />

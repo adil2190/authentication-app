@@ -34,6 +34,33 @@
 .h_40 {
   height: 40px;
 }
+
+
+.w_30p {
+  width: 30%;
+}
+.w_40p {
+  width: 40%;
+}
+.w_50p {
+  width: 50%;
+}
+.w_60p {
+  width: 60%;
+}
+.w_70p {
+  width: 70%;
+}
+.w_80p {
+  width: 80%;
+}
+.w_90p {
+  width: 90%;
+}
+.w_100p {
+  width: 100%;
+}
+
 .link {
   color: var(--link_color) !important;
 }
@@ -93,3 +120,15 @@
   margin-top: 10px;
 }
 
+
+
+
+
+.info_card {
+  height: 100px;
+}
+
+.info_card_flex {
+  display: flex;
+  height: 100%;
+}
