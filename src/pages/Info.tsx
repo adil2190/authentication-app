@@ -1,10 +1,16 @@
-import React from "react";
 import DashboardWrapper from "../components/wrappers/DashboardWrapper";
 import { Button, Card, Divider, Flex, Text } from "@chakra-ui/react";
-import AuthWrapper from "../components/wrappers/AuthWrapper";
 import AuthFooter from "../components/auth/AuthFooter";
 import InfoCard from "../components/misc/InfoCard";
-
+import Pic from "../assets/devchallenges.png";
+const data = [
+  { label: "PHOTO", value: Pic, isValueImg: true },
+  { label: "NAME", value: "test" },
+  { label: "BIO", value: "test" },
+  { label: "PHONE", value: "test" },
+  { label: "EMAIL", value: "test" },
+  { label: "PASSWORD", value: "test" },
+];
 function Info() {
   return (
     <DashboardWrapper>
@@ -26,15 +32,16 @@ function Info() {
           </Flex>
           <div className="h_20" />
           <Divider />
-          <InfoCard />
-          <Divider />
-          <InfoCard />
-          <Divider />
-          <InfoCard />
-          <Divider />
-          <InfoCard />
-          <Divider />
-          <InfoCard />
+          {data.map((d) => (
+            <>
+              <InfoCard
+                label={d.label}
+                value={d.value}
+                isValueImg={d.isValueImg || false}
+              />
+              <Divider />
+            </>
+          ))}
         </Card>
         <div style={{ width: 700 }}>
           <AuthFooter />
