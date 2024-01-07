@@ -26,7 +26,11 @@ function Info() {
                 some info may be visible to other people
               </Text>
             </div>
-            <Button variant={"outline"} colorScheme="gray">
+            <Button
+              variant={"outline"}
+              colorScheme="gray"
+              textColor={"GrayText"}
+            >
               Edit
             </Button>
           </Flex>
